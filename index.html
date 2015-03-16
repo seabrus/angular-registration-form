@@ -4,11 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Angular Registration Form</title>
+    <title>Example of Angular Registration Form | JavaScript</title>
+    <meta name="description" content="This registration form is developed on the basis of AngularJS. Features: an extensible timetable of working hours, and tabs.">
 
     <!-- Bootstrap core CSS -->
     <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -67,9 +66,10 @@
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <h1>Your Profile</h1>
-        <p>The registration form below is your first step to start using NNN. Just fill it in and get all advantages of NNN for your good.</p>
-        <p>Please note that required fields are marked with the sign *.</p>
+        <h1>Angular-Based Registration Form</h1>
+        <p>The registration form below is developed on the basis of AngularJS. One of its feature is an extensible timetable of working hours.</p>
+<!--        <p>The registration form below is your first step to start using NNN. Just fill it in and get all advantages of NNN for your good.</p> -->
+        <p>Required fields are marked with the sign *.</p>
       </div>
 
 
@@ -99,11 +99,11 @@
               <h2>Basic information</h2> <a name="required-fields"></a>
             </div>
 
-            <label for="restName"><i>*</i> Name of the restaurant:</label>
+            <label for="restName"><i>*</i> Name of your company:</label>
               <input type="text" id="restName" name="restName" required="" ng-model="ctrl.regData.restaurantName"> ​
-            <label for="motto"><i>*</i> Motto, slogan or brief greetings phrase:</label>
+            <label for="motto"><i>*</i> Motto or slogan:</label>
               <input type="text" id="motto" name="motto" required="" ng-model="ctrl.regData.motto">​
-            <label for="address"><i>*</i> Location: exact address of the place:</label>
+            <label for="address"><i>*</i> Company address:</label>
               <input type="text" id="address" name="address" required="" ng-model="ctrl.regData.address">​
             <label for="wifiName"><i>*</i> WiFi name (ID):</label>
               <input type="text" id="wifiName" name="wifiName" required="" ng-model="ctrl.regData.wifiName">​
@@ -113,16 +113,16 @@
               <input type="number" id="foundedAt" placeholder="1961" ng-model="ctrl.regData.foundedAt">​
 
          <!-- Opening hours -->
-            <label class="pointer" ng-class="ctrl.getHoursClass()" ng-click="ctrl.showHours=!ctrl.showHours">Opening hours:</label>
+            <label class="pointer" ng-class="ctrl.getHoursClass()" ng-click="ctrl.showHours=!ctrl.showHours">Working hours:</label>
             <div opening-hours-directive=""></div> 
 
          <!-- Alerts -->
             <div class="blank">&nbsp;</div>
             <div class="alert alert-warning" role="alert" ng-show="regForm.$dirty && regForm.$invalid">
                 <strong class="font22">&#10004;</strong> Please fill in the mandatory field(s) <a href="#required-fields">above</a>: 
-                <span ng-show="regForm.restName.$invalid"><br>&mdash; Name of the restaurant</span>
-                <span ng-show="regForm.motto.$invalid"><br>&mdash; Motto, slogan or brief greetings phrase </span>
-                <span ng-show="regForm.address.$invalid"><br>&mdash; Location: exact address of the place</span>
+                <span ng-show="regForm.restName.$invalid"><br>&mdash; Name of the company</span>
+                <span ng-show="regForm.motto.$invalid"><br>&mdash; Motto or slogan </span>
+                <span ng-show="regForm.address.$invalid"><br>&mdash; Company address</span>
                 <span ng-show="regForm.wifiName.$invalid"><br>&mdash; WiFi name (ID)</span>
             </div>
 
@@ -225,148 +225,6 @@
       </div>
 
 <!-- === end of the application === -->
-<!-- ============================================================= -->
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-      <div class="page-header">
-        <h1>Labels</h1>
-      </div>
-      <p>
-        <span class="label label-default">Default</span>
-        <span class="label label-primary">Primary</span>
-        <span class="label label-success">Success</span>
-        <span class="label label-info">Info</span>
-        <span class="label label-warning">Warning</span>
-        <span class="label label-danger">Danger</span>
-      </p>
-
-
-      <div class="page-header">
-        <h1>Badges</h1>
-      </div>
-      <p>
-        <a href="#">Inbox <span class="badge">42</span></a>
-      </p>
-      <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
-      </ul>
-
-
-      <div class="page-header">
-        <h1>Navs</h1>
-      </div>
-      <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
-      </ul>
-
-
-      <div class="page-header">
-        <h1>Navbars</h1>
-      </div>
-
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </nav>
-
-      <nav class="navbar navbar-inverse">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </nav>
-
-
-      <div class="page-header">
-        <h1>Alerts</h1>
-      </div>
-      <div class="alert alert-success" role="alert">
-        <strong>Well done!</strong> You successfully read this important alert message.
-      </div>
-      <div class="alert alert-info" role="alert">
-        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-      </div>
-      <div class="alert alert-warning" role="alert">
-        <strong>Warning!</strong> Best check yo self, you're not looking too good.
-      </div>
-      <div class="alert alert-danger" role="alert">
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-      </div>
-
-
 
 
     </div> <!-- /container -->

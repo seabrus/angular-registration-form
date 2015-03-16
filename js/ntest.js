@@ -16,7 +16,7 @@ app.controller('nTestController', [ 'DataService', function( DataService ) {
     self.saveUserProfile = function( result ) { DataService.saveUserProfileData( result ); };
 
 
-// Opening hours timetable visibility
+// Working hours timetable visibility
 	self.showHours = false;
 	self.getHoursClass = function() {
         var yes = (self.showHours === false);
@@ -98,13 +98,12 @@ app.factory('DataService', [ '$http', function( $http ) {
         paymentMethod: 'PayPal'
 	};
 
-    //var paymentMethods = [ { name: 'Bank transfer' }, { name: 'PayPal' }, { name: 'Credit card' } ];
     var paymentMethods = [ 'Bank transfer', 'PayPal', 'Credit card'  ];
 
     var subscriptionPlans =  [ 
-        { name: 'Basic plan', style: 'panel-default', description: 'A plan just to test Naible' }, 
-        { name: 'Business plan', style: 'panel-success', description: 'This plan is selected by the most restaurants' }, 
-        { name: 'Advanced plan', style: 'panel-info', description: 'A plan for restaurant networks' } 
+        { name: 'Basic plan', style: 'panel-default', description: 'A plan just to test the service' }, 
+        { name: 'Business plan', style: 'panel-success', description: 'This plan is selected by most companies' }, 
+        { name: 'Advanced plan', style: 'panel-info', description: 'A plan for corporate networks' } 
     ];
 
 
@@ -126,7 +125,7 @@ app.factory('DataService', [ '$http', function( $http ) {
 
 app.directive('openingHoursDirective', [ function() {
     return {
-                templateUrl: 'views/opening-hours.html',
+                templateUrl: 'views/working-hours.html',
                 restrict: 'A'
    };
 }]);

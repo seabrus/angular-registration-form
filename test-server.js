@@ -15,7 +15,7 @@ var server = http.createServer( function (req, res) {
         var conType = '';
 
         if ( req.url === '/' )
-            fileName = 'index-tabs.html';
+            fileName = 'index.html';
         else
             fileName = url.pathname;
 
@@ -176,7 +176,7 @@ var server = http.createServer( function (req, res) {
 
                 var userProfileObject = JSON.parse( userProfile );
 
-                 fs.writeFileSync( 'db/test.dat', userProfile );
+                 fs.writeFileSync( 'profile/test.dat', userProfile );
 //console.log( userProfileObject )
 //console.log( '     ' )
 //console.log( userProfileObject.openingHours[0].hours[0] )
